@@ -2,7 +2,7 @@
 
 **Student:** Parker Woolsey
 **Semester:** Spring Semester 2026
-**Live Site:** [View Site](https://pwoolls1.github.io/index.html/)
+**Live Site:** [View Site](https://pwoolls1.github.io/WDD331R/practicesite/index.html)
 
 ## About
 
