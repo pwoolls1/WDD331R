@@ -14,4 +14,6 @@ every push to main.
 ## Pages
 
 - [Home](index.html)
-- [Custom Properties and Nesting](unit-1/custom-properties/index.html)
+
+- [Unit 1 — Custom Properties and Nesting](unit-1/custom-properties/index.html)
+- [Unit 2 — Custom Properties and Nesting](unit-2/custom-properties/index.html)
