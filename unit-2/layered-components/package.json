@@ -4,11 +4,6 @@
   "description": "",
   "main": "index.js",
 
-  "dependencies": {
-    "detect-libc": "^2.1.2",
-    "lightningcss-cli-win32-x64-msvc": "^1.32.0"
-  },
-
   "devDependencies": {
     "lightningcss-cli": "^1.32.0"
   },
