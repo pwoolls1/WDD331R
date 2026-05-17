@@ -1,0 +1,25 @@
+{
+  "name": "layered-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  "dependencies": {
+    "detect-libc": "^2.1.2",
+    "lightningcss-cli-win32-x64-msvc": "^1.32.0"
+  },
+
+  "devDependencies": {
+    "lightningcss-cli": "^1.32.0"
+  },
+
+  "scripts": {
+    "build": "lightningcss css/main.css --bundle -o dist/styles.css --minify",
+    "watch": "lightningcss css/main.css --bundle -o dist/styles.css --watch"
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
