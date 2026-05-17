@@ -33,6 +33,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: unit-2/layered-components
+          folder: .
           branch: website
           clean: true
