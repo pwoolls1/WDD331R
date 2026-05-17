@@ -1,0 +1,12 @@
+:root {
+  --space-small: 0.5rem;
+  --space-medium: 1rem;
+  --space-large: 2rem;
+
+  --font-body: Arial, sans-serif;
+
+  --radius-card: 1rem;
+  --radius-small: 0.4rem;
+
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.08);
+}

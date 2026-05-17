@@ -1,0 +1,27 @@
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-medium);
+  margin-top: var(--space-medium);
+}
+
+.note-form {
+  display: grid;
+  gap: var(--space-medium);
+  max-width: 40rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input,
+textarea,
+select {
+  padding: var(--space-small);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  font: inherit;
+}
