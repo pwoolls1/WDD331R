@@ -1,9 +1,89 @@
 :root {
-  --color-primary: #315c48;
-  --color-background: #f4f1ea;
-  --color-surface: #ffffff;
-  --color-text: #24312b;
-  --color-muted: #66736b;
-  --color-accent: #c58b3c;
-  --color-border: #d8d2c4;
+  color-scheme: light;
+
+  --seed-bg: #f4f6f8;
+  --seed-surface: #ffffff;
+
+  --seed-text: #1e293b;
+  --seed-text-muted: #64748b;
+
+  --seed-accent: #315c48;
+  --seed-accent-hover: #c58b3c;
+
+  --seed-link: #315c48;
+  --seed-link-hover: #c58b3c;
+
+  --seed-border: #d8d2c4;
+  --seed-border-strong: #c5beb1;
+}
+
+html:has(input[name='theme-preference'][value='dark']:checked) {
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:has(input[name='theme-preference'][value='system']:checked) {
+    color-scheme: dark;
+  }
+}
+
+:root,
+html {
+  --color-bg: light-dark(var(--seed-bg), #111827);
+
+  --color-surface: light-dark(var(--seed-surface), #1f2937);
+
+  --color-text: light-dark(var(--seed-text), #f9fafb);
+
+  --color-text-muted: light-dark(var(--seed-text-muted), #cbd5e1);
+
+  --color-accent: light-dark(var(--seed-accent), #86efac);
+
+  --color-accent-hover: light-dark(var(--seed-accent-hover), #fbbf24);
+
+  --color-link: light-dark(var(--seed-link), #86efac);
+
+  --color-link-hover: light-dark(var(--seed-link-hover), #fbbf24);
+
+  --color-border: light-dark(var(--seed-border), #374151);
+
+  --color-border-strong: light-dark(var(--seed-border-strong), #4b5563);
+
+  accent-color: var(--color-accent);
+
+  --header-bg: var(--color-accent);
+
+  --header-text: light-dark(#ffffff, #f9fafb);
+
+  --theme-toggle-bg:
+    color-mix(in srgb, var(--header-text) 20%, var(--header-bg));
+
+  --theme-toggle-border:
+    color-mix(in srgb, var(--header-text) 40%, var(--header-bg));
+
+  --theme-toggle-bg-hover:
+    color-mix(in srgb, var(--header-text) 30%, var(--header-bg));
+
+  --theme-toggle-border-hover:
+    color-mix(in srgb, var(--header-text) 55%, var(--header-bg));
+
+  --shadow-color:
+    light-dark(rgb(0 0 0 / 0.08), rgb(0 0 0 / 0.35));
+
+  --shadow-sm:
+    0 1px 2px 0 var(--shadow-color);
+
+  --shadow-md:
+    0 8px 24px var(--shadow-color);
+}
+
+/* legacy aliases */
+
+:root,
+html {
+  --color-background: var(--color-bg);
+
+  --color-primary: var(--color-accent);
+
+  --color-muted: var(--color-text-muted);
 }

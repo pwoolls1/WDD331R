@@ -1,12 +1,43 @@
 :root {
-  --space-small: 0.5rem;
-  --space-medium: 1rem;
-  --space-large: 2rem;
+  --font-family-sans: system-ui, sans-serif;
+  --font-family-mono: monospace;
 
-  --font-body: Arial, sans-serif;
+  --font-size-sm: 1.4rem;
+  --font-size-md: 1.6rem;
+  --font-size-lg: 1.8rem;
 
-  --radius-card: 1rem;
-  --radius-small: 0.4rem;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
 
-  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  --transition-base: 0.2s ease;
+
+  --icon-size-sm: 24px;
+  --icon-size-md: 32px;
+
+  --outline-width: 2px;
+
+  /* legacy aliases if your old CSS uses these */
+  --space-sm: var(--spacing-sm);
+  --space-md: var(--spacing-md);
+  --space-lg: var(--spacing-lg);
+}
+
+:root {
+  --space-small: var(--spacing-sm);
+  --space-medium: var(--spacing-md);
+  --space-large: var(--spacing-lg);
+
+  --font-body: var(--font-family-sans);
+
+  --radius-small: var(--radius-sm);
+  --radius-card: var(--radius-lg);
+
+  --shadow-card: var(--shadow-md);
 }

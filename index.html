@@ -6,6 +6,7 @@
 
   <title>Parker Woolsey - WDD 331R Practice Site</title>
 
+  <script src="js/theme-preference.js"></script>
   <link rel="stylesheet" href="unit-2/layered-components/dist/styles.css">
 </head>
 
@@ -20,6 +21,33 @@
       Practice Site for my Advanced CSS assignments, experiments,
       and course projects.
     </p>
+    <details class="theme-menu">
+  <summary class="theme-control">
+    <span class="visually-hidden">Color scheme</span>
+  </summary>
+
+  <div class="theme-extra" role="group" aria-label="Choose color scheme">
+
+    <label class="theme-control theme-pick" data-theme-pick="light">
+      <input name="theme-preference" type="radio" value="light">
+      <span aria-hidden="true">&#9788;&#65039;</span>
+      <span class="visually-hidden">Light</span>
+    </label>
+
+    <label class="theme-control theme-pick" data-theme-pick="system">
+      <input name="theme-preference" type="radio" value="system" checked>
+      <span aria-hidden="true">&#9881;&#65039;</span>
+      <span class="visually-hidden">System default</span>
+    </label>
+
+    <label class="theme-control theme-pick" data-theme-pick="dark">
+      <input name="theme-preference" type="radio" value="dark">
+      <span aria-hidden="true">&#127766;</span>
+      <span class="visually-hidden">Dark</span>
+    </label>
+
+  </div>
+</details>
   </header>
 
   <main>
@@ -37,8 +65,7 @@
             and reusable styling systems.
           </p>
 
-          <a class="btn primary"
-             href="unit-1/custom-properties/index.html">
+          <a class="btn primary" href="unit-1/index.html">
              View Assignment
           </a>
         </article>
@@ -51,8 +78,7 @@
             tokens, components, and Lightning CSS.
           </p>
 
-          <a class="btn primary"
-             href="unit-2/layered-components/index.html">
+          <a class="btn primary" href="unit-2/layered-components/index.html">
              View Assignment
           </a>
         </article>
