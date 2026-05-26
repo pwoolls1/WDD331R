@@ -61,3 +61,18 @@ This site uses:
 - reusable components
 - responsive layouts
 - a bundled production stylesheet
+
+
+## Tokenized Color System and Dark Mode
+
+This Practice Site now supports light mode, dark mode, and a system default theme option. The theme toggle is available on the homepage and assignment pages, and the selected preference is saved with `localStorage` so it persists between page loads.
+
+The main color system is controlled through semantic CSS tokens. The color tokens live in:
+
+`unit-2/layered-components/css/tokens/colors.css`
+
+This file defines the background, surface, text, muted text, accent, link, border, header, theme toggle, and shadow colors. The site uses these semantic tokens instead of hardcoded color values so the design can switch between light and dark mode consistently.
+
+The spacing, font, radius, transition, icon, and focus tokens live in:
+
+`unit-2/layered-components/css/tokens/variables.css`

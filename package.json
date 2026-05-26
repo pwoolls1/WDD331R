@@ -1,0 +1,26 @@
+{
+  "name": "wdd331r",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "lightningcss-cli": "^1.32.0"
+  },
+  "scripts": {
+  "build": "lightningcss --bundle --minify --targets \">= 0.25%\" unit-2/lightning-css-demo/css/main.css -o dist/styles.css",
+  "watch": "chokidar \"unit-2/lightning-css-demo/css/**/*.css\" -c \"npm run build\" --debounce 600"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwoolls1/WDD331R.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pwoolls1/WDD331R/issues"
+  },
+  "homepage": "https://github.com/pwoolls1/WDD331R#readme"
+}

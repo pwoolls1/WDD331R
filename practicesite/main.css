@@ -1,3 +1,53 @@
+:root {
+    --color-bg: #f4f6f8;
+    --color-surface: #ffffff;
+    --color-text: #1e293b;
+    --color-text-muted: #64748b;
+
+    --color-accent: #315c48;
+    --color-accent-hover: #c58b3c;
+
+    --color-link: #315c48;
+    --color-link-hover: #c58b3c;
+
+    --color-border: #d8d2c4;
+
+    --header-bg: var(--color-accent);
+    --header-text: #ffffff;
+
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+
+    --font-family-sans: Arial, sans-serif;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.6rem;
+
+    --radius-lg: 1rem;
+
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 0.08);
+}
+
+html:has(input[name='theme-preference'][value='dark']:checked) {
+    --color-bg: #111827;
+    --color-surface: #1f2937;
+    --color-text: #f9fafb;
+    --color-text-muted: #cbd5e1;
+
+    --color-accent: #86efac;
+    --color-accent-hover: #fbbf24;
+
+    --color-link: #86efac;
+    --color-link-hover: #fbbf24;
+
+    --color-border: #374151;
+
+    --header-bg: #14532d;
+    --header-text: #f9fafb;
+
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 0.35);
+}
+
 *,
 *::before,
 *::after {
