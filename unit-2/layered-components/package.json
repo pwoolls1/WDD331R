@@ -8,10 +8,10 @@
     "lightningcss-cli": "^1.32.0"
   },
 
-  "scripts": {
-    "build": "lightningcss css/main.css --bundle -o dist/styles.css --minify",
-    "watch": "lightningcss css/main.css --bundle -o dist/styles.css --watch"
-  },
+"scripts": {
+  "build": "lightningcss --bundle --minify --targets \">= 0.25%\" css/main.css -o dist/styles.css",
+  "watch": "chokidar \"css/**/*.css\" -c \"npm run build\" --debounce 600"
+},
 
   "keywords": [],
   "author": "",

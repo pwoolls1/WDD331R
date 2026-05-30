@@ -13,7 +13,5 @@
 @import url('./components/forms.css') layer(components);
 @import url('./components/nav.css') layer(components);
 @import url('./components/temples.css') layer(components);
-
-@import url('./utilities/utilities.css') layer(utilities);
-
 @import url('./components/theme-toggle.css') layer(components);
+@import url('./components/effects.css') layer(components);
