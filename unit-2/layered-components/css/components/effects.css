@@ -215,7 +215,7 @@
       color-mix(in oklch, var(--color-accent) 75%, transparent),
       color-mix(in oklch, var(--color-accent-hover) 70%, transparent)
     ),
-    url("https://picsum.photos/seed/blend-demo/1200/700") center / cover;
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80") center / cover;
   background-blend-mode: overlay;
   box-shadow: var(--shadow-raised);
 }
@@ -291,7 +291,7 @@
       var(--color-accent),
       var(--color-accent-hover)
     ),
-    url("https://picsum.photos/seed/blend-family/800/500")
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80")
       center / cover;
   color: white;
   box-shadow: var(--shadow-card);
@@ -312,7 +312,7 @@
       var(--color-accent),
       var(--color-accent-hover)
     ),
-    url("https://picsum.photos/seed/blend-family/800/500")
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80")
       center / cover;
 
   color: white;
@@ -378,7 +378,7 @@
       var(--color-accent),
       var(--color-accent-hover)
     ),
-    url("https://picsum.photos/seed/interactive-blend/900/500") center / cover;
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80") center / cover;
   background-blend-mode: multiply;
   box-shadow: var(--shadow-raised);
 }
