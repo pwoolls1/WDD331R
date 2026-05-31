@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blend Modes</title>
+
+  <script src="../js/theme-preference.js"></script>
+  <link rel="stylesheet" href="../dist/styles.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <a href="../index.html">&larr; Home</a>
+    <h1>CSS Blend Modes</h1>
+    <p>Exploring how colors, images, and layers combine in CSS.</p>
+  </header>
+
+<main>
+  <section class="card">
+    <h2>What Blend Modes Do</h2>
+    <p>
+      Blend modes control how two layers of color combine where they overlap.
+      Instead of one layer simply covering another, the browser blends the
+      pixel values together to create effects like multiply, screen, overlay,
+      and color.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Two CSS Blend Mode Properties</h2>
+
+    <div class="cards">
+      <article class="card">
+        <h3>background-blend-mode</h3>
+        <p>
+          Blends an element's own background layers, such as a gradient and an
+          image. This is safer for text because the text stays on a predictable
+          surface.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>mix-blend-mode</h3>
+        <p>
+          Blends an entire element with whatever is behind it on the page.
+          This is powerful, but less predictable because it depends on the
+          surrounding layout.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Blend Mode Families</h2>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Darken Family</h3>
+        <p>
+          Modes like multiply and darken make the final result darker and are
+          useful for color washes and rich overlays.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Lighten Family</h3>
+        <p>
+          Modes like screen and lighten brighten the image and work well for
+          glow effects.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Contrast Family</h3>
+        <p>
+          Overlay and soft-light preserve contrast while changing the overall
+          mood of an image.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Component Family</h3>
+        <p>
+          Color, hue, saturation, and luminosity replace specific color
+          channels while preserving others.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="blend-demo">
+    <h2>Background Blend Mode Demo</h2>
+
+    <div class="blend-hero">
+      <div class="blend-hero-content">
+        <h3>background-blend-mode</h3>
+        <p>
+          A gradient and image are blended inside the same element. This creates
+          a color effect without editing the original image.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Interactive Blend Mode Demo</h2>
+
+    <p>
+      Click the buttons below to compare different blend modes on the same
+      image.
+    </p>
+
+    <div class="blend-controls">
+      <button class="btn primary" data-mode="multiply">Multiply</button>
+      <button class="btn primary" data-mode="screen">Screen</button>
+      <button class="btn primary" data-mode="overlay">Overlay</button>
+      <button class="btn primary" data-mode="color">Color</button>
+    </div>
+
+    <div class="interactive-blend-demo" id="blendDemo">
+      <p id="blendModeLabel">
+        background-blend-mode: multiply;
+      </p>
+    </div>
+  </section>
+
+  <section class="blend-mode-grid">
+    <h2>Blend Mode Comparison</h2>
+
+    <article class="blend-family multiply">
+      <h3>Multiply</h3>
+      <p>Darkens the image and creates a rich duotone effect.</p>
+    </article>
+
+    <article class="blend-family screen">
+      <h3>Screen</h3>
+      <p>Lightens the image and creates a projected-light effect.</p>
+    </article>
+
+    <article class="blend-family overlay">
+      <h3>Overlay</h3>
+      <p>Preserves contrast while shifting the image's colors.</p>
+    </article>
+
+    <article class="blend-family color">
+      <h3>Color</h3>
+      <p>Applies hue and saturation while preserving lightness.</p>
+    </article>
+  </section>
+
+  <section class="card">
+    <h2>Why Text Legibility Matters</h2>
+
+    <p>
+      Blend modes on text can look impressive, but the contrast changes
+      depending on what is behind the text. This can make text difficult to
+      read and should always be tested carefully.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Why Isolation Matters</h2>
+
+    <p>
+      By default, mix-blend-mode blends with everything behind an element.
+      Using isolation: isolate creates a boundary so the effect stays inside
+      the intended component.
+    </p>
+
+    <div class="isolation-demo">
+      <div class="isolation-card">
+        <span class="blend-badge">Blended Badge</span>
+
+        <p>
+          This badge uses mix-blend-mode, but the parent card uses
+          isolation so the effect stays contained.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const blendDemo = document.querySelector("#blendDemo");
+  const blendModeLabel = document.querySelector("#blendModeLabel");
+  const buttons = document.querySelectorAll("[data-mode]");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const mode = button.dataset.mode;
+
+      blendDemo.style.backgroundBlendMode = mode;
+      blendModeLabel.textContent =
+        `background-blend-mode: ${mode};`;
+    });
+  });
+</script>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Parker Woolsey</p>
+  </footer>
+</body>
+</html>
