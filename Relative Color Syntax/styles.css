@@ -1,0 +1,38 @@
+:root {
+ --seed: oklch(0.55 0.2 140);
+
+ --accent-100: oklch(from var(--seed) calc(l + 0.35) calc(c * 0.3) h);
+ --accent-300: oklch(from var(--seed) calc(l + 0.15) calc(c * 0.8) h);
+ --accent-500: var(--seed);
+ --accent-700: oklch(from var(--seed) calc(l - 0.18) c h);
+ --accent-900: oklch(from var(--seed) calc(l - 0.35) calc(c * 0.5) h);
+}
+
+
+
+.palette {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.swatch {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 10px;
+}
+
+.s100 { background: var(--accent-100); }
+.s200 { background: var(--accent-200); }
+.s300 { background: var(--accent-300); }
+.s400 { background: var(--accent-400); }
+.s500 { background: var(--accent-500); }
+.s600 { background: var(--accent-600); }
+.s700 { background: var(--accent-700); }
+.s800 { background: var(--accent-800); }
+.s900 { background: var(--accent-900); }
