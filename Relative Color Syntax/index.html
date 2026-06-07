@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Relative Color Syntax Demo</title>
+
+  <!-- External CSS File -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Relative Color Syntax Demo</h1>
+
+    <p>
+      Creating a full palette from one seed color using
+      <code>oklch()</code> and relative color syntax.
+    </p>
+  </header>
+
+  <main>
+
+    <section class="intro">
+      <h2>Generated Palette</h2>
+
+      <p>
+        Every swatch below is generated from a single custom property:
+        <code>--seed</code>.
+      </p>
+    </section>
+
+    <section class="palette">
+
+      <div class="swatch s100">100</div>
+      <div class="swatch s200">200</div>
+      <div class="swatch s300">300</div>
+      <div class="swatch s400">400</div>
+      <div class="swatch s500">500</div>
+      <div class="swatch s600">600</div>
+      <div class="swatch s700">700</div>
+      <div class="swatch s800">800</div>
+      <div class="swatch s900">900</div>
+
+    </section>
+
+    <section class="explanation">
+
+      <h2>How It Works</h2>
+
+      <p>
+        Relative color syntax allows us to directly adjust the
+        lightness, chroma, and hue channels of a color.
+      </p>
+
+      <p>
+        Instead of mixing two colors together like
+        <code>color-mix()</code>, we modify individual channels
+        using <code>calc()</code>.
+      </p>
+
+      <p>
+        Try changing the <code>--seed</code> value in
+        <code>styles.css</code> to see the entire palette
+        automatically update.
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
