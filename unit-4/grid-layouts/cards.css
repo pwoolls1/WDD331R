@@ -21,7 +21,11 @@
 .articles-page .card-grid {
   display: grid;
   gap: var(--space-4);
-  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(240px, 100%), 1fr)
+  );
+  align-items: stretch;
 }
 
 .articles-page .card {
@@ -68,4 +72,39 @@
   margin-block-start: auto;
   margin-block-end: var(--space-4);
   align-self: flex-start;
+}
+
+/* Subgrid enhancement */
+@supports (grid-template-rows: subgrid) {
+  .articles-page .card-grid {
+    grid-auto-rows: auto 1fr auto;
+    row-gap: var(--space-4);
+  }
+
+  .articles-page .card {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
+
+  .articles-page .card > div:last-child {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
+
+  .articles-page .card h2,
+  .articles-page .card p,
+  .articles-page .card a {
+    margin: 0 var(--space-4);
+  }
+
+  .articles-page .card h2 {
+    margin-top: var(--space-4);
+  }
+
+  .articles-page .card a {
+    margin-bottom: var(--space-4);
+    align-self: start;
+  }
 }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Module Demo - Parker Woolsey</title>
+
+  <script src="../../js/theme-preference.js"></script>
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <link rel="stylesheet" href="sticky-demo.css">
+</head>
+
+<body class="sticky-page">
+  <header class="page-header">
+    <h1>Sticky Module Demo</h1>
+    <p>
+      This page demonstrates a sticky sidebar module and explains the
+      overflow bug that can break sticky positioning.
+    </p>
+    <a class="btn primary" href="/index.html">Home</a>
+  </header>
+
+  <main class="sticky-layout">
+    <article class="article-content">
+      <h2>Advanced Layout Notes</h2>
+
+      <p>
+        Sticky positioning is useful when an element should scroll normally
+        at first, then lock into place once it reaches a specific offset.
+      </p>
+
+      <p>
+        The important part is that the sticky element needs an offset, such as
+        <code>top</code>. Without that offset, the browser has no point where
+        the element should begin sticking.
+      </p>
+
+      <p>
+        This demo uses a sidebar as the sticky module. As the article scrolls,
+        the sidebar remains visible so the reader can quickly see the main
+        ideas from the page.
+      </p>
+
+      <h2>Why Sticky Can Break</h2>
+
+      <p>
+        A common problem happens when an ancestor wrapper has
+        <code>overflow: hidden</code>. That ancestor can become the sticky
+        element’s scroll container, which prevents the sticky behavior from
+        working the way you expect.
+      </p>
+
+      <p>
+        In this assignment, the bug was tested by adding
+        <code>overflow: hidden</code> to the layout wrapper. The fix was to
+        avoid placing overflow on the ancestor between the sticky element and
+        the page scroll container.
+      </p>
+
+      <h2>More Scroll Content</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+        accumsan, augue at facilisis pulvinar, lorem neque tempor sapien, sed
+        cursus risus lectus non magna.
+      </p>
+
+      <p>
+        Praesent nec nibh id risus tempor suscipit. Suspendisse potenti.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+        posuere cubilia curae.
+      </p>
+
+      <p>
+        Donec volutpat, lorem at fermentum suscipit, ligula erat cursus lorem,
+        at commodo massa arcu in nibh. Integer vel enim id velit finibus
+        consequat.
+      </p>
+
+      <p>
+        Sed vitae magna sit amet justo dignissim placerat. Aliquam erat
+        volutpat. Nam facilisis neque vel mi elementum, a suscipit justo
+        vulputate.
+      </p>
+
+      <p>
+        Curabitur feugiat, augue eu gravida luctus, magna sapien blandit
+        sapien, vitae porttitor lorem neque sed est.
+      </p>
+
+      <p>
+        Maecenas eget mauris a magna sagittis pulvinar. Pellentesque habitant
+        morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </p>
+
+      <p>
+        Morbi in metus id neque convallis bibendum. Nullam facilisis,
+        lectus eget placerat vulputate, eros mi cursus tortor, non posuere
+        libero justo nec lorem.
+      </p>
+
+      <p>
+        Fusce at velit justo. Proin viverra nibh at mi aliquet, vel placerat
+        ipsum facilisis. Donec ullamcorper nulla id justo pharetra, vel
+        tristique est commodo.
+      </p>
+    </article>
+
+    <aside class="sticky-sidebar">
+      <h2>Sticky Summary</h2>
+      <ul>
+        <li>Uses <code>position: sticky</code></li>
+        <li>Includes a required <code>top</code> offset</li>
+        <li>Breaks if the wrong ancestor uses overflow</li>
+        <li>Fixed by moving the visual clipping effect</li>
+      </ul>
+    </aside>
+  </main>
+</body>
+</html>
