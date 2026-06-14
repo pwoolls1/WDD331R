@@ -1,0 +1,75 @@
+.sticky-page {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.sticky-page .page-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.sticky-page .page-header p {
+  color: var(--color-text-muted);
+}
+
+.sticky-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-4);
+
+  /*
+    Sticky bug fix:
+    I tested the bug by adding overflow: hidden here on .sticky-layout.
+    That broke the sticky sidebar because an overflow ancestor can become
+    the sticky element's scroll container. To fix it, I removed overflow
+    from this ancestor and kept visual clipping on the child cards instead.
+  */
+}
+
+.article-content,
+.sticky-sidebar {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  overflow: clip;
+}
+
+.article-content h2 {
+  margin-block-start: var(--space-5);
+}
+
+.article-content h2:first-child {
+  margin-block-start: 0;
+}
+
+.article-content p {
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.sticky-sidebar {
+  align-self: start;
+  position: sticky;
+  top: var(--space-4);
+}
+
+.sticky-sidebar ul {
+  padding-inline-start: var(--space-4);
+}
+
+.sticky-sidebar li + li {
+  margin-block-start: var(--space-2);
+}
+
+@media (min-width: 800px) {
+  .sticky-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
