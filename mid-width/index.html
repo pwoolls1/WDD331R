@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min-width: 0 Flex Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>min-width: 0 on Flex Items</h1>
+        <p>A live demo showing why flex items sometimes overflow.</p>
+    </header>
+
+    <main>
+        <section class="demo-section">
+            <h2>Sidebar Layout</h2>
+            <p>This layout looks correct, but the long filename causes overflow.</p>
+
+            <div class="sidebar-layout">
+                <aside class="sidebar">
+                    Sidebar
+                </aside>
+
+                <main class="content">
+                    <h3>Uploaded File</h3>
+                    <p class="filename">
+                        super-long-file-name-that-keeps-going-and-going-and-going-and-breaks-the-flex-layout-final-version.pdf
+                    </p>
+                </main>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Column Flex Example</h2>
+            <p>This shows the vertical version of the same issue using <code>min-height: 0</code>.</p>
+
+            <div class="panel">
+                <div class="panel-header">
+                    Panel Header
+                </div>
+
+                <div class="panel-body">
+                    <div class="scroller">
+                        <p>Lots of content inside a scrollable panel.</p>
+                        <p>Line 1</p>
+                        <p>Line 2</p>
+                        <p>Line 3</p>
+                        <p>Line 4</p>
+                        <p>Line 5</p>
+                        <p>Line 6</p>
+                        <p>Line 7</p>
+                        <p>Line 8</p>
+                        <p>Line 9</p>
+                        <p>Line 10</p>
+                        <p>Line 11</p>
+                        <p>Line 12</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

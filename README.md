@@ -8,6 +8,8 @@
 
 This repository contains my Practice Site for WDD 331R: Advanced CSS. Throughout the semester, I add new pages and styles as I complete course assignments and explore modern CSS techniques.
 
+Recent additions include advanced CSS Grid techniques using **subgrid**, component-level responsiveness with **container queries**, and **sticky positioning** patterns for persistent interface elements.
+
 The site is automatically deployed to GitHub Pages whenever changes are pushed to the `main` branch.
 
 ## Pages
@@ -18,7 +20,9 @@ The site is automatically deployed to GitHub Pages whenever changes are pushed t
 * Unit 3 — Visual Effects Showcase
 * Unit 3 — Blend Modes
 * Unit 4 — Editorial Layout
-* Unit 4 — Responsive Card Grid
+* Unit 4 — Responsive Card Grid with Subgrid
+* Unit 4 — Container Query Demo
+* Unit 4 — Sticky Module Demo
 
 ## CSS Architecture
 
@@ -67,6 +71,9 @@ This site uses:
 * Responsive Layouts
 * Bundled Production Stylesheets
 * CSS Grid and Flexbox Layout Patterns
+* Subgrid for aligned card layouts
+* Container Queries for component-based responsiveness
+* Sticky Positioning for persistent interface modules
 
 ## Tokenized Color System and Dark Mode
 
@@ -87,3 +94,21 @@ unit-2/layered-components/css/tokens/variables.css
 ```
 
 These tokens manage spacing, typography, border radii, transitions, icon sizing, and focus states throughout the site.
+
+
+## Typography System
+
+This site uses a modular typography scale controlled through `css/tokens/variables.css`. I replaced the older fixed font-size tokens with a larger type scale that includes small text, body text, headings, and display text.
+
+The larger type sizes use `clamp()` so headings scale fluidly between smaller and larger viewport widths. Smaller text sizes stay fixed so captions and body text remain readable.
+
+The type system also uses semantic role tokens, such as:
+
+* `--font-size-body`
+* `--font-size-caption`
+* `--font-size-heading-sm`
+* `--font-size-heading-md`
+* `--font-size-heading-lg`
+* `--font-size-display`
+
+This allows the site to reference typography by purpose instead of by raw size. I also added Merriweather as a custom heading font with `display=swap`, while keeping a system sans-serif stack for body text.
