@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variable Fonts Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <h1>Variable Fonts Demo</h1>
+
+    <section class="demo-card">
+      <h2>Live Font Weight Slider</h2>
+
+      <p class="sample" id="sampleText">
+        Typography in motion
+      </p>
+
+      <label for="weightSlider">
+        Font Weight: <span id="weightValue">400</span>
+      </label>
+
+      <input
+  type="range"
+  id="weightSlider"
+  min="100"
+  max="1000"
+  value="400"
+/>
+    </section>
+
+    <section class="demo-card">
+      <h2>Hover Animation</h2>
+      <p class="hover-text">
+        Hover over this text to see the font weight animate.
+      </p>
+    </section>
+  </main>
+
+<script>
+  const slider = document.querySelector("#weightSlider");
+  const sampleText = document.querySelector("#sampleText");
+  const weightValue = document.querySelector("#weightValue");
+
+  slider.addEventListener("input", function () {
+    sampleText.style.setProperty("--weight", this.value);
+    weightValue.textContent = this.value;
+  });
+</script>
+</body>
+</html>

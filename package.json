@@ -7,10 +7,10 @@
     "chokidar-cli": "^3.0.0",
     "lightningcss-cli": "^1.32.0"
   },
-"scripts": {
-  "build": "lightningcss --bundle --minify --targets \">= 0.25%\" unit-2/layered-components/css/main.css -o dist/styles.css",
-  "watch": "chokidar \"unit-2/layered-components/css/**/*.css\" -c \"npm run build\" --debounce 600"
-},
+  "scripts": {
+    "build": "lightningcss --bundle --minify --targets \">= 0.25%\" unit-2/layered-components/css/main.css -o dist/styles.css",
+    "watch": "chokidar \"unit-2/layered-components/css/**/*.css\" -c \"npm run build\" --debounce 600"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pwoolls1/WDD331R.git"

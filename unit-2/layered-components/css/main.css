@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
 
-@layer tokens, base, layout, components, utilities;
 
 @import url('./tokens/colors.css') layer(tokens);
 @import url('./tokens/variables.css') layer(tokens);
@@ -17,6 +15,8 @@
 @import url('./components/temples.css') layer(components);
 @import url('./components/theme-toggle.css') layer(components);
 @import url('./components/effects.css') layer(components);
+
+@layer tokens, base, layout, components, utilities;
 
 @media print {
   body {
