@@ -11,7 +11,7 @@
 "scripts": {
   "build": "lightningcss --bundle --minify --targets \">= 0.25%\" unit-2/layered-components/css/main.css -o dist/styles.css",
   "watch": "chokidar \"unit-2/layered-components/css/**/*.css\" -c \"npm run build\" --debounce 600"
-}
+},
 
   "keywords": [],
   "author": "",
