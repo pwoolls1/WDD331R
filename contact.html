@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Parker Woolsey</title>
+
+  <script src="js/theme-preference.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="dist/styles.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>Parker Woolsey</h1>
+    <p>Contact Me</p>
+    <p>Have a question or want to get in touch? Send me a message below.</p>
+
+    <a class="btn primary" href="index.html">Back Home</a>
+  </header>
+
+  <main class="page">
+    <section class="card">
+      <h2>Contact Form</h2>
+
+      <form action="#" method="post">
+
+        <p>
+          <label for="name">Name</label><br>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required>
+        </p>
+
+        <p>
+          <label for="email">Email Address</label><br>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required>
+        </p>
+
+        <p>
+          <label for="subject">Subject</label><br>
+          <input
+            type="text"
+            id="subject"
+            name="subject">
+        </p>
+
+        <p>
+          <label for="message">Message</label><br>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required></textarea>
+        </p>
+
+        <p>
+          <input
+            type="checkbox"
+            id="updates"
+            name="updates">
+
+          <label for="updates">
+            Subscribe to future updates
+          </label>
+        </p>
+
+        <button class="btn primary" type="submit">
+          Send Message
+        </button>
+
+      </form>
+    </section>
+  </main>
+</body>
+</html>
