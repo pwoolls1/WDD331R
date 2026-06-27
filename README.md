@@ -112,3 +112,9 @@ The type system also uses semantic role tokens, such as:
 * `--font-size-display`
 
 This allows the site to reference typography by purpose instead of by raw size. I also added Merriweather as a custom heading font with `display=swap`, while keeping a system sans-serif stack for body text.
+
+- Added `resume.html` with semantic resume/CV content.
+- Added `contact.html` with a styled contact form.
+- Added print styles for a clean resume PDF.
+- Updated form controls to use the site accent color.
+- Audited token files for unused or duplicate custom properties.

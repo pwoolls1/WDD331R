@@ -80,3 +80,38 @@ img {
 small {
   font-size: var(--font-size-caption);
 }
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: var(--space-3, 0.75rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 0.5rem);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+textarea {
+  min-height: 8rem;
+  max-height: 20rem;
+  resize: vertical;
+  field-sizing: content;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  accent-color: var(--color-accent);
+}
+
+button {
+  cursor: pointer;
+}

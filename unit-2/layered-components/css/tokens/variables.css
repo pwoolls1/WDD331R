@@ -70,4 +70,6 @@
   --icon-size-sm: 24px;
   --icon-size-md: 32px;
   --outline-width: 2px;
+
+  accent-color: var(--color-accent);
 }
