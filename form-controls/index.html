@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Control Styling Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Form Control Styling Beyond the Basics</h1>
+      <p>Comparing default form controls with a custom, accessible styling system.</p>
+    </header>
+<header>
+  <h1>Form Control Styling Beyond the Basics</h1>
+  <p>Comparing default form controls with a custom, accessible styling system.</p>
+
+  <a class="btn primary" href="../../index.html">← Back Home</a>
+</header>
+    <section class="demo-grid">
+      <form class="form-card plain-form">
+        <h2>Before: Browser Defaults</h2>
+
+        <label for="plain-name">Name</label>
+        <input type="text" id="plain-name" placeholder="Parker Woolsey" />
+
+        <label for="plain-email">Email</label>
+        <input type="email" id="plain-email" placeholder="name@example.com" />
+
+        <label for="plain-topic">Topic</label>
+        <select id="plain-topic">
+          <option>General question</option>
+          <option>Project feedback</option>
+          <option>Technical issue</option>
+        </select>
+
+        <label for="plain-priority">Priority</label>
+        <input type="range" id="plain-priority" min="1" max="10" value="5" />
+
+        <label for="plain-message">Message</label>
+        <textarea id="plain-message" rows="5" placeholder="Type your message..."></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <form class="form-card styled-form">
+        <h2>After: Custom Styled Controls</h2>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Parker Woolsey" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="name@example.com" />
+
+        <label for="topic">Topic</label>
+        <select id="topic">
+          <option>General question</option>
+          <option>Project feedback</option>
+          <option>Technical issue</option>
+        </select>
+
+        <label for="priority">Priority</label>
+        <input type="range" id="priority" min="1" max="10" value="5" />
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Type your message..."></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
