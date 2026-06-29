@@ -1,0 +1,157 @@
+:root {
+  --color-bg: #f4f1eb;
+  --color-surface: #ffffff;
+  --color-text: #1f1f1f;
+  --color-muted: #666;
+  --color-border: #c9c2b8;
+  --color-border-strong: #8f877c;
+  --color-accent: #8a3ffc;
+
+  --radius: 0.75rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+header {
+  margin-bottom: var(--space-lg);
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.form-card {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+label {
+  font-weight: 700;
+  margin-top: var(--space-sm);
+}
+
+/* Styled form only */
+
+.styled-form input,
+.styled-form select,
+.styled-form textarea,
+.styled-form button {
+  font: inherit;
+}
+
+.styled-form input,
+.styled-form select,
+.styled-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  caret-color: var(--color-accent);
+  outline: none;
+}
+
+.styled-form input:focus-visible,
+.styled-form select:focus-visible,
+.styled-form textarea:focus-visible,
+.styled-form button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.styled-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='%238a3ffc' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+.styled-form input[type="range"] {
+  appearance: none;
+  padding: 0;
+  height: 1.5rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.styled-form input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.4rem;
+  background: var(--color-border-strong);
+  border-radius: 999px;
+}
+
+.styled-form input[type="range"]::-moz-range-track {
+  height: 0.4rem;
+  background: var(--color-border-strong);
+  border-radius: 999px;
+}
+
+.styled-form input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: -0.4rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.styled-form input[type="range"]::-moz-range-thumb {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.styled-form input[type="range"]:focus-visible {
+  outline: none;
+}
+
+.styled-form input[type="range"]:focus-visible::-webkit-slider-thumb {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.styled-form input[type="range"]:focus-visible::-moz-range-thumb {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.styled-form button {
+  margin-top: var(--space-md);
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}

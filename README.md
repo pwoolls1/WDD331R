@@ -118,3 +118,5 @@ This allows the site to reference typography by purpose instead of by raw size. 
 - Added print styles for a clean resume PDF.
 - Updated form controls to use the site accent color.
 - Audited token files for unused or duplicate custom properties.
+
+- **Meaningful Motion with Reduced-motion Support** `/unit-6/motion/index.html` – Demonstrates explicit transitions, custom cubic-bezier easing, staggered card animations, keyframe animations, and reduced-motion accessibility support.

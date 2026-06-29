@@ -1,0 +1,299 @@
+body {
+  background: var(--color-bg, #f6f3ee);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.site-header,
+.dashboard-header,
+.actions,
+.card-grid {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+}
+
+.site-name {
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+nav a {
+  color: var(--color-text, #222);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+}
+
+.nav-cta {
+  background: var(--color-accent, #315cfd);
+  color: white;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding-block: 3rem 1.5rem;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #2f9e44;
+  color: white;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-accent, #315cfd);
+  color: white;
+}
+
+.btn-secondary {
+  background: var(--color-surface, white);
+  color: var(--color-text, #222);
+  border: 1px solid var(--color-border, #ddd);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text, #222);
+  border: 1px solid transparent;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--color-surface, white);
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 0.08);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.card-tag {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: #e7f5ff;
+}
+
+.card-tag--active {
+  background: #fff3bf;
+}
+
+.card-tag--pending {
+  background: #f1f3f5;
+}
+
+.card-link {
+  font-weight: 700;
+  color: var(--color-accent, #315cfd);
+  text-decoration: none;
+}
+
+/* Motion only applies when users have not requested reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  nav a {
+    transition-property: color, background-color, transform;
+    transition-duration: 220ms;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  nav a:hover,
+  nav a:focus-visible {
+    background-color: rgb(0 0 0 / 0.08);
+    transform: translateY(-2px);
+    transition-duration: 140ms;
+  }
+
+  .nav-cta {
+    transition-property: background-color, color, transform, box-shadow;
+    transition-duration: 260ms;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .nav-cta:hover,
+  .nav-cta:focus-visible {
+    background-color: #183ee8;
+    color: white;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.18);
+    transition-duration: 160ms;
+  }
+
+  .btn {
+    transition-property: background-color, color, border-color, transform, box-shadow;
+    transition-duration: 240ms;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 0.75rem 1.25rem rgb(0 0 0 / 0.18);
+    transition-duration: 150ms;
+  }
+
+  .btn-secondary:hover,
+  .btn-secondary:focus-visible {
+    transform: translateY(-2px);
+    border-color: currentColor;
+    box-shadow: 0 0.4rem 0.9rem rgb(0 0 0 / 0.1);
+    transition-duration: 170ms;
+  }
+
+  .btn-ghost:hover,
+  .btn-ghost:focus-visible {
+    background-color: rgb(0 0 0 / 0.06);
+    border-color: rgb(0 0 0 / 0.14);
+    transform: translateY(-1px);
+    transition-duration: 180ms;
+  }
+
+  .card {
+    animation-name: card-enter;
+    animation-duration: 650ms;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    transition-property: transform, box-shadow, border-color;
+    transition-duration: 280ms;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: rgb(0 0 0 / 0.18);
+    box-shadow: 0 1rem 1.5rem rgb(0 0 0 / 0.12);
+    transition-duration: 170ms;
+  }
+
+  .card-link {
+    transition-property: color, transform;
+    transition-duration: 220ms;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .card-link:hover,
+  .card-link:focus-visible {
+    color: #183ee8;
+    transform: translateX(4px);
+    transition-duration: 140ms;
+  }
+
+  .status-badge {
+    animation-name: live-pulse;
+    animation-duration: 900ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.45, 0, 0.15, 1);
+  }
+
+  .card:nth-child(1) {
+    animation-delay: 80ms;
+  }
+
+  .card:nth-child(2) {
+    animation-delay: 160ms;
+  }
+
+  .card:nth-child(3) {
+    animation-delay: 240ms;
+  }
+
+  .card:nth-child(4) {
+    animation-delay: 320ms;
+  }
+
+  .card:nth-child(5) {
+    animation-delay: 400ms;
+  }
+
+  .card:nth-child(6) {
+    animation-delay: 480ms;
+  }
+
+  @keyframes live-pulse {
+    from {
+      transform: scale(1);
+      opacity: 0.82;
+    }
+
+    to {
+      transform: scale(1.08);
+      opacity: 1;
+    }
+  }
+
+  @keyframes card-enter {
+    from {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-badge {
+    outline: 3px solid rgb(47 158 68 / 0.3);
+    outline-offset: 3px;
+  }
+}
