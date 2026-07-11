@@ -15,6 +15,7 @@
 @import url('./components/temples.css') layer(components);
 @import url('./components/theme-toggle.css') layer(components);
 @import url('./components/effects.css') layer(components);
+@import url('./components/icons.css') layer(components);
 
 @layer tokens, base, layout, components, utilities;
 

@@ -120,3 +120,8 @@ This allows the site to reference typography by purpose instead of by raw size. 
 - Audited token files for unused or duplicate custom properties.
 
 - **Meaningful Motion with Reduced-motion Support** `/unit-6/motion/index.html` – Demonstrates explicit transitions, custom cubic-bezier easing, staggered card animations, keyframe animations, and reduced-motion accessibility support.
+
+## Pages
+
+- [Home](https://pwoolls1.github.io/WDD331R/index.html)
+- [Resume / CV](https://pwoolls1.github.io/WDD331R/resume.html) — Updated with a reusable inline Lucide SVG sprite, accessible decorative icons, and an icon-only GitHub link.
