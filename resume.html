@@ -3,29 +3,117 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Resume | Parker Woolsey</title>
 
   <script src="js/theme-preference.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="dist/styles.css">
 </head>
 
 <body>
+  <!-- Hidden Lucide SVG sprite -->
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    style="display: none;"
+    aria-hidden="true"
+  >
+    <!-- House -->
+    <symbol id="icon-house" viewBox="0 0 24 24">
+      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+      <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"></path>
+    </symbol>
+
+    <!-- Graduation Cap -->
+    <symbol id="icon-graduation-cap" viewBox="0 0 24 24">
+      <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.58 3.908a2 2 0 0 0 1.66 0Z"></path>
+      <path d="M22 10v6"></path>
+      <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+    </symbol>
+
+    <!-- Code -->
+    <symbol id="icon-code-2" viewBox="0 0 24 24">
+      <path d="m18 16 4-4-4-4"></path>
+      <path d="m6 8-4 4 4 4"></path>
+      <path d="m14.5 4-5 16"></path>
+    </symbol>
+
+    <!-- Briefcase -->
+    <symbol id="icon-briefcase-business" viewBox="0 0 24 24">
+      <path d="M12 12h.01"></path>
+      <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+      <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
+      <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+    </symbol>
+
+    <!-- Folder Code -->
+    <symbol id="icon-folder-code" viewBox="0 0 24 24">
+      <path d="M10 10.5 8 13l2 2.5"></path>
+      <path d="m14 10.5 2 2.5-2 2.5"></path>
+      <path d="M2 6a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z"></path>
+    </symbol>
+
+    <!-- Heart Handshake -->
+    <symbol id="icon-heart-handshake" viewBox="0 0 24 24">
+      <path d="M19.414 14.414 22 12"></path>
+      <path d="M3.34 19a10 10 0 0 1 0-14.142"></path>
+      <path d="M18.66 5a10 10 0 0 1 0 14.142"></path>
+      <path d="m2 12 2.586 2.586"></path>
+      <path d="m6.5 11.5 5 5a2.121 2.121 0 0 0 3-3l-2-2"></path>
+      <path d="m8.5 9.5 1-1a2.121 2.121 0 0 1 3 0l3 3a2.121 2.121 0 0 0 3-3L17 7"></path>
+      <path d="M12.5 8.5 9.586 5.586a2 2 0 0 0-2.828 0L4 8.343"></path>
+    </symbol>
+
+    <!-- GitHub -->
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.28 0 6.72-2 6.72-5.5A4.5 4.5 0 0 0 19.5 6c.44-1.1.44-2.7 0-3.5 0 0-1.28 0-3.5 1.5a12.3 12.3 0 0 0-6 0C7.78 2.5 6.5 2.5 6.5 2.5c-.44.8-.44 2.4 0 3.5A4.5 4.5 0 0 0 5.28 9c0 3.5 3.44 5.5 6.72 5.5A4.8 4.8 0 0 0 11 18v4"></path>
+      <path d="M9 18c-4.51 2-5-2-7-2"></path>
+    </symbol>
+  </svg>
+
   <header class="page-header">
     <h1>Parker Woolsey</h1>
-    <p>Resume / CV</p>
-    <p>Web Design and Development student focused on front-end design and responsive websites.</p>
 
-    <a class="btn primary" href="index.html">Back Home</a>
+    <p>Resume / CV</p>
+
+    <p>
+      Web Design and Development student focused on front-end design
+      and responsive websites.
+    </p>
+
+    <a class="btn primary icon-link" href="index.html">
+      <svg
+        class="icon"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="#icon-house"></use>
+      </svg>
+
+      <span>Back Home</span>
+    </a>
   </header>
 
   <main class="page resume-page">
     <section class="card">
       <h2>Professional Summary</h2>
+
       <p>
         Motivated Web Design and Development student with experience creating
         responsive websites using HTML, CSS, JavaScript, and modern CSS
@@ -36,15 +124,54 @@
     </section>
 
     <section class="card">
-      <h2>Education</h2>
+      <h2 class="section-heading">
+        <svg
+          class="icon"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <use href="#icon-graduation-cap"></use>
+        </svg>
+
+        <span>Education</span>
+      </h2>
+
       <h3>Brigham Young University–Idaho</h3>
+
       <p>Bachelor of Science in Web Design and Development</p>
       <p>Expected Graduation: April 2026</p>
       <p>GPA: 3.745</p>
     </section>
 
     <section class="card">
-      <h2>Technical Skills</h2>
+      <h2 class="section-heading">
+        <svg
+          class="icon"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <use href="#icon-code-2"></use>
+        </svg>
+
+        <span>Technical Skills</span>
+      </h2>
+
       <ul>
         <li>HTML5 and CSS3</li>
         <li>JavaScript</li>
@@ -58,11 +185,34 @@
     </section>
 
     <section class="card">
-      <h2>Professional Experience</h2>
+      <h2 class="section-heading">
+        <svg
+          class="icon"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <use href="#icon-briefcase-business"></use>
+        </svg>
+
+        <span>Professional Experience</span>
+      </h2>
 
       <article>
         <h3>Pest Control Technician</h3>
-        <p><strong>Palisade Pest Control</strong> | April–August 2024 and April–August 2025</p>
+
+        <p>
+          <strong>Palisade Pest Control</strong> |
+          April–August 2024 and April–August 2025
+        </p>
+
         <ul>
           <li>Managed an independent service route of 8–10 customers daily.</li>
           <li>Diagnosed and treated residential pest issues including ants, spiders, wasps, and rodents.</li>
@@ -73,7 +223,12 @@
 
       <article>
         <h3>Inventory Management Specialist</h3>
-        <p><strong>Rare Earth Gallery</strong> | April–October 2021</p>
+
+        <p>
+          <strong>Rare Earth Gallery</strong> |
+          April–October 2021
+        </p>
+
         <ul>
           <li>Maintained inventory records for more than 1,000 items.</li>
           <li>Processed incoming shipments and organized inventory accurately.</li>
@@ -83,10 +238,53 @@
     </section>
 
     <section class="card">
-      <h2>Projects</h2>
+      <h2 class="section-heading">
+        <svg
+          class="icon"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <use href="#icon-folder-code"></use>
+        </svg>
+
+        <span>Projects</span>
+      </h2>
 
       <article>
-        <h3>WDD 331R Practice Site</h3>
+        <div class="project-heading">
+          <h3>WDD 331R Practice Site</h3>
+
+          <a
+            class="icon-button"
+            href="https://github.com/pwoolls1/WDD331R"
+            aria-label="View the WDD 331R Practice Site repository on GitHub"
+          >
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use href="#icon-github"></use>
+            </svg>
+          </a>
+        </div>
+
         <p>
           Built a responsive practice site showcasing advanced CSS concepts
           including Grid, Flexbox, container queries, visual effects, design
@@ -96,6 +294,7 @@
 
       <article>
         <h3>Advanced CSS Demonstrations</h3>
+
         <p>
           Created educational demos covering modern CSS features such as
           display: contents, blend modes, typography systems, container
@@ -105,11 +304,34 @@
     </section>
 
     <section class="card">
-      <h2>Volunteer Service</h2>
+      <h2 class="section-heading">
+        <svg
+          class="icon"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <use href="#icon-heart-handshake"></use>
+        </svg>
+
+        <span>Volunteer Service</span>
+      </h2>
 
       <article>
         <h3>Volunteer Teacher</h3>
-        <p><strong>Somali American United Council</strong> | December 2022 – December 2023</p>
+
+        <p>
+          <strong>Somali American United Council</strong> |
+          December 2022–December 2023
+        </p>
+
         <p>
           Assisted students with educational activities while fostering a
           welcoming and supportive learning environment.
@@ -119,3 +341,4 @@
   </main>
 </body>
 </html>
+```
