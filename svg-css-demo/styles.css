@@ -1,0 +1,309 @@
+:root {
+  --color-background: #f4f1eb;
+  --color-surface: #ffffff;
+  --color-text: #222222;
+  --color-muted: #5d6269;
+  --color-primary: #6a3df0;
+  --color-primary-dark: #4521b3;
+  --color-accent: #e54865;
+  --color-border: #d8d3ca;
+  --color-sun: #ffd54a;
+  --color-sun-ray: #ef8d22;
+
+  --shadow-card: 0 12px 32px rgb(34 34 34 / 0.1);
+
+  --radius-small: 0.5rem;
+  --radius-large: 1.25rem;
+
+  --space-small: 0.75rem;
+  --space-medium: 1.5rem;
+  --space-large: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+.wrapper {
+  width: min(100% - 2rem, 950px);
+  margin-inline: auto;
+}
+
+.site-header {
+  padding-block: 4rem;
+  color: white;
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-primary-dark)
+    );
+}
+
+.eyebrow,
+.step-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1;
+}
+
+.intro {
+  max-width: 650px;
+  margin-block: 1.5rem 0;
+  font-size: 1.15rem;
+}
+
+.demo-section {
+  padding-block: var(--space-large);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section-heading {
+  margin-bottom: var(--space-medium);
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.step-label {
+  color: var(--color-primary);
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: var(--space-medium);
+}
+
+.demo-card {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  padding: 2rem;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-card);
+}
+
+.demo-card h3 {
+  margin-top: 0;
+}
+
+.demo-card p {
+  max-width: 42rem;
+  color: var(--color-muted);
+}
+
+code {
+  padding: 0.15rem 0.35rem;
+  font-family: Consolas, monospace;
+  color: var(--color-primary-dark);
+  background: #eee9ff;
+  border-radius: 0.25rem;
+}
+
+/* Example 1: basic SVG styling */
+
+.basic-icon {
+  width: 120px;
+  height: 120px;
+}
+
+.basic-icon path {
+  fill: var(--color-primary);
+}
+
+/* Example 2: fill and stroke */
+
+.fill-icon,
+.stroke-icon {
+  width: 120px;
+  height: 120px;
+}
+
+.fill-icon path {
+  fill: var(--color-accent);
+}
+
+.stroke-icon path {
+  fill: transparent;
+  stroke: var(--color-primary);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+/* Example 3: currentColor */
+
+.icon-button {
+  display: inline-flex;
+  gap: 0.65rem;
+  align-items: center;
+  padding: 0.85rem 1.2rem;
+  font: inherit;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-small);
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+
+.icon-button:hover {
+  color: var(--color-primary);
+  background: white;
+  transform: translateY(-2px);
+}
+
+.icon-button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.button-icon {
+  width: 1.4em;
+  height: 1.4em;
+  fill: currentColor;
+}
+
+/* Example 4: targeting individual parts */
+
+.sun-icon {
+  width: 180px;
+  height: 180px;
+}
+
+.sun-center {
+  fill: var(--color-sun);
+  stroke: var(--color-sun-ray);
+  stroke-width: 4;
+}
+
+.sun-rays {
+  fill: none;
+  stroke: var(--color-sun-ray);
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+/* Example 5: transitions and hover */
+
+.interactive-heart,
+.interactive-sun {
+  width: 160px;
+  height: 160px;
+}
+
+.interactive-heart {
+  overflow: visible;
+}
+
+.interactive-heart path {
+  fill: var(--color-primary);
+  transform-origin: center;
+  transition:
+    fill 300ms ease,
+    transform 300ms ease;
+}
+
+.interactive-heart:hover path {
+  fill: var(--color-accent);
+  transform: scale(1.12) rotate(-5deg);
+}
+
+.interactive-sun {
+  overflow: visible;
+}
+
+.interactive-sun .sun-center {
+  transition:
+    fill 300ms ease,
+    transform 300ms ease;
+  transform-origin: center;
+}
+
+.interactive-sun .sun-rays {
+  transition: transform 600ms ease;
+  transform-origin: center;
+}
+
+.interactive-sun:hover .sun-center {
+  fill: #fff08a;
+  transform: scale(1.08);
+}
+
+.interactive-sun:hover .sun-rays {
+  transform: rotate(45deg);
+}
+
+/* Example 6: inline SVG versus img */
+
+.comparison-icon {
+  width: 130px;
+  height: 130px;
+}
+
+.inline-heart path {
+  fill: var(--color-primary);
+  transition: fill 250ms ease;
+}
+
+.inline-heart:hover path {
+  fill: var(--color-accent);
+}
+
+/*
+  This changes the entire image as one object.
+  It cannot directly select the path inside heart.svg.
+*/
+
+.external-heart {
+  filter:
+    invert(30%)
+    sepia(80%)
+    saturate(2000%)
+    hue-rotate(235deg);
+}
+
+.site-footer {
+  padding-block: 2rem;
+  text-align: center;
+  color: white;
+  background: var(--color-text);
+}
+
+/* Reduced-motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Styling SVG with CSS</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <p class="eyebrow">WDD 331R Teaching Demo</p>
+      <h1>Styling SVG with CSS</h1>
+
+      <p class="intro">
+        Learn how to control SVG colors, strokes, hover effects, and individual
+        shapes using the same CSS techniques used with HTML.
+      </p>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <!-- Example 1 -->
+    <section class="demo-section">
+      <div class="section-heading">
+        <p class="step-label">Example 1</p>
+        <h2>A Basic Inline SVG</h2>
+      </div>
+
+      <div class="demo-card">
+        <svg
+          class="basic-icon"
+          viewBox="0 0 24 24"
+          role="img"
+          aria-labelledby="basic-heart-title"
+        >
+          <title id="basic-heart-title">Heart icon</title>
+
+          <path
+            d="M12 21s-7-4.35-9.33-8.45C.67 9.05 2.1 5 6.35 5
+               8.4 5 10.1 6.2 12 8.25
+               13.9 6.2 15.6 5 17.65 5
+               21.9 5 23.33 9.05 21.33 12.55
+               19 16.65 12 21 12 21Z"
+          />
+        </svg>
+
+        <p>
+          This SVG is written directly inside the HTML, so CSS can target it
+          like any other element.
+        </p>
+      </div>
+    </section>
+
+    <!-- Example 2 -->
+    <section class="demo-section">
+      <div class="section-heading">
+        <p class="step-label">Example 2</p>
+        <h2>Using Fill and Stroke</h2>
+      </div>
+
+      <div class="demo-grid">
+        <article class="demo-card">
+          <h3>Fill</h3>
+
+          <svg
+            class="fill-icon"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-labelledby="fill-heart-title"
+          >
+            <title id="fill-heart-title">Filled heart icon</title>
+
+            <path
+              d="M12 21s-7-4.35-9.33-8.45C.67 9.05 2.1 5 6.35 5
+                 8.4 5 10.1 6.2 12 8.25
+                 13.9 6.2 15.6 5 17.65 5
+                 21.9 5 23.33 9.05 21.33 12.55
+                 19 16.65 12 21 12 21Z"
+            />
+          </svg>
+
+          <p>
+            The <code>fill</code> property controls the color inside a shape.
+          </p>
+        </article>
+
+        <article class="demo-card">
+          <h3>Stroke</h3>
+
+          <svg
+            class="stroke-icon"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-labelledby="stroke-heart-title"
+          >
+            <title id="stroke-heart-title">Outlined heart icon</title>
+
+            <path
+              d="M12 21s-7-4.35-9.33-8.45C.67 9.05 2.1 5 6.35 5
+                 8.4 5 10.1 6.2 12 8.25
+                 13.9 6.2 15.6 5 17.65 5
+                 21.9 5 23.33 9.05 21.33 12.55
+                 19 16.65 12 21 12 21Z"
+            />
+          </svg>
+
+          <p>
+            The <code>stroke</code> property controls the outline of a shape.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Example 3 -->
+    <section class="demo-section">
+      <div class="section-heading">
+        <p class="step-label">Example 3</p>
+        <h2>Using currentColor</h2>
+      </div>
+
+      <div class="demo-card current-color-demo">
+        <button class="icon-button" type="button">
+          <svg
+            class="button-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 21s-7-4.35-9.33-8.45C.67 9.05 2.1 5 6.35 5
+                 8.4 5 10.1 6.2 12 8.25
+                 13.9 6.2 15.6 5 17.65 5
+                 21.9 5 23.33 9.05 21.33 12.55
+                 19 16.65 12 21 12 21Z"
+            />
+          </svg>
+
+          Save to Favorites
+        </button>
+
+        <p>
+          The icon uses <code>fill: currentColor</code>, so it automatically
+          matches the button’s text color.
+        </p>
+      </div>
+    </section>
+
+    <!-- Example 4 -->
+    <section class="demo-section">
+      <div class="section-heading">
+        <p class="step-label">Example 4</p>
+        <h2>Styling Individual SVG Parts</h2>
+      </div>
+
+      <div class="demo-card">
+        <svg
+          class="sun-icon"
+          viewBox="0 0 120 120"
+          role="img"
+          aria-labelledby="sun-title sun-description"
+        >
+          <title id="sun-title">Decorative sun icon</title>
+
+          <desc id="sun-description">
+            A yellow sun with a circular center and orange rays.
+          </desc>
+
+          <g class="sun-rays">
+            <line x1="60" y1="5" x2="60" y2="25" />
+            <line x1="60" y1="95" x2="60" y2="115" />
+            <line x1="5" y1="60" x2="25" y2="60" />
+            <line x1="95" y1="60" x2="115" y2="60" />
+
+            <line x1="20" y1="20" x2="34" y2="34" />
+            <line x1="86" y1="86" x2="100" y2="100" />
+            <line x1="20" y1="100" x2="34" y2="86" />
+            <line x1="86" y1="34" x2="100" y2="20" />
+          </g>
+
+          <circle class="sun-center" cx="60" cy="60" r="27" />
+        </svg>
+
+        <p>
+          Classes inside the SVG allow the center and rays to be styled
+          separately.
+        </p>
+      </div>
+    </section>
+
+    <!-- Example 5 -->
+    <section class="demo-section">
+      <div class="section-heading">
+        <p class="step-label">Example 5</p>
+        <h2>Transitions and Hover Effects</h2>
+      </div>
+
+      <div class="demo-grid">
+        <article class="demo-card">
+          <h3>Hover the Heart</h3>
+
+          <svg
+            class="interactive-heart"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-labelledby="interactive-heart-title"
+          >
+            <title id="interactive-heart-title">
+              Interactive heart icon
+            </title>
+
+            <path
+              d="M12 21s-7-4.35-9.33-8.45C.67 9.05 2.1 5 6.35 5
+                 8.4 5 10.1 6.2 12 8.25
+                 13.9 6.2 15.6 5 17.65 5
+                 21.9 5 23.33 9.05 21.33 12.55
+                 19 16.65 12 21 12 21Z"
+            />
+          </svg>
+
+          <p>
+            CSS transitions animate the icon’s color, scale, and rotation.
+          </p>
+        </article>
+
+        <article class="demo-card">
+          <h3>Hover the Sun</h3>
+
+          <svg
+            class="interactive-sun"
+            viewBox="0 0 120 120"
+            role="img"
+            aria-labelledby="interactive-sun-title"
+          >
+            <title id="interactive-sun-title">
+              Interactive sun icon
+            </title>
+
+            <g class="sun-rays">
+              <line x1="60" y1="5" x2="60" y2="25" />
+              <line x1="60" y1="95" x2="60" y2="115" />
+              <line x1="5" y1="60" x2="25" y2="60" />
+              <line x1="95" y1="60" x2="115" y2="60" />
+
+              <line x1="20" y1="20" x2="34" y2="34" />
+              <line x1="86" y1="86" x2="100" y2="100" />
+              <line x1="20" y1="100" x2="34" y2="86" />
+              <line x1="86" y1="34" x2="100" y2="20" />
+            </g>
+
+            <circle class="sun-center" cx="60" cy="60" r="27" />
+          </svg>
+
+          <p>
+            The group containing the rays rotates without changing the center.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Example 6 -->
+    <section class="demo-section">
+      <div class="section-heading">
+        <p class="step-label">Example 6</p>
+        <h2>Inline SVG Versus an Image</h2>
+      </div>
+
+      <div class="demo-grid">
+        <article class="demo-card">
+          <h3>Inline SVG</h3>
+
+          <svg
+            class="comparison-icon inline-heart"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-labelledby="inline-comparison-title"
+          >
+            <title id="inline-comparison-title">
+              Inline heart icon
+            </title>
+
+            <path
+              d="M12 21s-7-4.35-9.33-8.45C.67 9.05 2.1 5 6.35 5
+                 8.4 5 10.1 6.2 12 8.25
+                 13.9 6.2 15.6 5 17.65 5
+                 21.9 5 23.33 9.05 21.33 12.55
+                 19 16.65 12 21 12 21Z"
+            />
+          </svg>
+
+          <p>
+            CSS can directly change the path because it is part of the HTML.
+          </p>
+        </article>
+
+        <article class="demo-card">
+          <h3>SVG Through an Image Tag</h3>
+
+          <img
+            class="comparison-icon external-heart"
+            src="heart.svg"
+            alt="Heart icon"
+          >
+
+          <p>
+            CSS can resize or filter this image, but it cannot directly target
+            the path inside the file.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>Styling SVG with CSS Teaching Demo</p>
+    </div>
+  </footer>
+</body>
+</html>
