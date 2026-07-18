@@ -11,6 +11,13 @@
   text-decoration: none;
   cursor: pointer;
 
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
   &:focus-visible {
     outline: 3px solid var(--color-accent);
     outline-offset: 4px;
@@ -29,6 +36,8 @@
 
   &:not(:disabled):hover {
     background: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-raised);
   }
 }
 
@@ -40,5 +49,7 @@
   &:not(:disabled):hover {
     background: var(--color-primary);
     color: var(--color-surface);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-raised);
   }
 }
