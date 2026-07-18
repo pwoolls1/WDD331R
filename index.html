@@ -3,183 +3,396 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parker Woolsey - WDD 331R Practice Site</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Parker Woolsey, a web designer and front-end developer focused on responsive design, modern CSS, accessibility, and thoughtful user experiences."
+  >
+
+  <title>Parker Woolsey | Web Design & Front-End Development</title>
 
   <script src="js/theme-preference.js"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="dist/styles.css">
 </head>
 
 <body>
-  <header class="page-header">
-    <h1>Parker Woolsey</h1>
-    <p>WDD 331R Advanced CSS</p>
-    <p>Practice Site for my Advanced CSS assignments and experiments.</p>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <details class="theme-menu">
-      <summary class="theme-control">
-        <span class="visually-hidden">Color scheme</span>
-      </summary>
+  <header class="portfolio-header">
+    <div class="header-inner">
+      <a class="site-name" href="index.html" aria-label="Parker Woolsey homepage">
+        Parker Woolsey
+      </a>
 
-      <div class="theme-extra" role="group" aria-label="Choose color scheme">
-        <label class="theme-control theme-pick" data-theme-pick="light">
-          <input name="theme-preference" type="radio" value="light">
-          <span aria-hidden="true">&#9788;&#65039;</span>
-          <span class="visually-hidden">Light</span>
-        </label>
+      <nav class="portfolio-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#featured-work">Featured Work</a>
+        <a href="#projects">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-        <label class="theme-control theme-pick" data-theme-pick="system">
-          <input name="theme-preference" type="radio" value="system" checked>
-          <span aria-hidden="true">&#9881;&#65039;</span>
-          <span class="visually-hidden">System default</span>
-        </label>
+      <details class="theme-menu">
+        <summary class="theme-control">
+          <span class="visually-hidden">Color scheme</span>
+        </summary>
 
-        <label class="theme-control theme-pick" data-theme-pick="dark">
-          <input name="theme-preference" type="radio" value="dark">
-          <span aria-hidden="true">&#127766;</span>
-          <span class="visually-hidden">Dark</span>
-        </label>
-      </div>
-    </details>
+        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+          <label class="theme-control theme-pick" data-theme-pick="light">
+            <input name="theme-preference" type="radio" value="light">
+            <span aria-hidden="true">&#9788;&#65039;</span>
+            <span class="visually-hidden">Light</span>
+          </label>
+
+          <label class="theme-control theme-pick" data-theme-pick="system">
+            <input name="theme-preference" type="radio" value="system" checked>
+            <span aria-hidden="true">&#9881;&#65039;</span>
+            <span class="visually-hidden">System default</span>
+          </label>
+
+          <label class="theme-control theme-pick" data-theme-pick="dark">
+            <input name="theme-preference" type="radio" value="dark">
+            <span aria-hidden="true">&#127766;</span>
+            <span class="visually-hidden">Dark</span>
+          </label>
+        </div>
+      </details>
+    </div>
   </header>
 
-  <main>
-    <section class="card-group">
-      <h2>Assignments</h2>
+  <main id="main-content">
+    <section class="portfolio-hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Web Designer &amp; Front-End Developer</p>
 
-      <div class="cards">
-        <article class="card">
-          <h3>Custom Properties and Nesting</h3>
-          <p>Practice using CSS variables, nesting, and reusable styling systems.</p>
-          <a class="btn primary" href="unit-1/index.html">View Assignment</a>
-        </article>
+        <h1 id="hero-title">
+          I create responsive websites with thoughtful design and modern CSS.
+        </h1>
 
-        <article class="card">
-          <h3>Layered Components</h3>
-          <p>Practice using layered CSS architecture, tokens, components, and Lightning CSS.</p>
-          <a class="btn primary" href="unit-2/layered-components/index.html">View Assignment</a>
-        </article>
+        <p class="hero-intro">
+          I am Parker Woolsey, a Web Design and Development student focused on
+          accessible interfaces, reusable CSS systems, and polished digital experiences.
+        </p>
 
-        <article class="card">
-          <h3>Visual Effects Showcase</h3>
-          <p>Demonstrates shadows, gradients, filters, glass effects, blend modes, and dark mode styling.</p>
-          <a class="btn primary" href="unit-3/index.html">View Assignment</a>
-        </article>
+        <div class="hero-actions">
+          <a class="btn primary" href="#featured-work">View Featured Work</a>
+          <a class="btn secondary" href="resume.html">View Resume</a>
+        </div>
+      </div>
 
-        <article class="card">
-          <h3>Blend Modes</h3>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-card visual-card-main">
+          <span>Responsive Design</span>
+          <strong>CSS built for every screen.</strong>
+        </div>
+
+        <div class="visual-card visual-card-small visual-card-top">
+          <span>Accessibility</span>
+        </div>
+
+        <div class="visual-card visual-card-small visual-card-bottom">
+          <span>Modern CSS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="section-label">About Me</p>
+        <h2 id="about-title">Designing with purpose, structure, and clarity.</h2>
+      </div>
+
+      <div class="about-copy">
+        <p>
+          I am studying Web Design and Development at BYU–Idaho. My work combines
+          visual design with front-end development to create websites that are
+          responsive, accessible, and easy to use.
+        </p>
+
+        <p>
+          This portfolio highlights projects from WDD 331R Advanced CSS, including
+          component architecture, color systems, responsive layouts, typography,
+          forms, animation, SVG styling, and print design.
+        </p>
+      </div>
+    </section>
+
+    <section class="featured-section" id="featured-work" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Selected Work</p>
+          <h2 id="featured-title">Featured Projects</h2>
+        </div>
+
+        <p>
+          A few projects that best represent my approach to layout, accessibility,
+          responsive design, and visual polish.
+        </p>
+      </div>
+
+      <div class="featured-grid">
+        <article class="featured-card featured-card-large">
+          <div class="project-number" aria-hidden="true">01</div>
+          <p class="project-tag">Typography &amp; Print</p>
+          <h3>Professional Resume</h3>
           <p>
-            Explore background-blend-mode, mix-blend-mode,
-            isolation, accessibility concerns, and interactive demos.
+            A semantic resume page with clear hierarchy, responsive spacing,
+            and print-specific styling for a polished professional presentation.
           </p>
-          <a class="btn primary" href="unit-3/blend-modes.html">
-            View Assignment
+          <a class="project-link" href="resume.html">View Resume <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="featured-card">
+          <div class="project-number" aria-hidden="true">02</div>
+          <p class="project-tag">Motion Design</p>
+          <h3>Meaningful Motion</h3>
+          <p>
+            A motion study using staggered animation, custom easing, transitions,
+            and reduced-motion support.
+          </p>
+          <a class="project-link" href="unit-6/motion/index.html">
+            View Project <span aria-hidden="true">→</span>
           </a>
         </article>
 
-        <article class="card">
-          <h3>Editorial Layout</h3>
+        <article class="featured-card">
+          <div class="project-number" aria-hidden="true">03</div>
+          <p class="project-tag">Visual Effects</p>
+          <h3>Advanced CSS Showcase</h3>
           <p>
-            A responsive article layout built with CSS Grid and
-            grid-template-areas that adapts from a single-column
-            layout to a two-column layout with a sidebar.
+            An exploration of gradients, filters, shadows, glass effects,
+            blend modes, and dark-mode styling.
           </p>
-          <a class="btn primary" href="unit-4/grid-layouts/editorial.html">
-            View Assignment
+          <a class="project-link" href="unit-3/index.html">
+            View Project <span aria-hidden="true">→</span>
           </a>
         </article>
+      </div>
+    </section>
 
-        <article class="card">
-          <h3>Responsive Card Grid</h3>
-          <p>
-            A responsive card grid built with auto-fit, minmax(),
-            and display: contents to create flexible layouts that
-            adapt to any screen size.
-          </p>
-          <a class="btn primary" href="unit-4/grid-layouts/cards.html">
-            View Assignment
-          </a>
-        </article>
+    <section class="skills-section" aria-labelledby="skills-title">
+      <div>
+        <p class="section-label">Capabilities</p>
+        <h2 id="skills-title">Skills I use</h2>
+      </div>
 
-        <article class="card">
-          <h3>Container Query Demo</h3>
-          <p>
-            A component that changes layout based on the size of its own
-            container instead of the size of the browser viewport.
-          </p>
-          <a class="btn primary" href="unit-4/grid-layouts/advanced/container-demo.html">
-            View Assignment
-          </a>
-        </article>
+      <ul class="skill-list" aria-label="Technical skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Responsive Design</li>
+        <li>Accessibility</li>
+        <li>CSS Grid</li>
+        <li>Flexbox</li>
+        <li>Design Systems</li>
+        <li>Git &amp; GitHub</li>
+      </ul>
+    </section>
 
-        <article class="card">
-  <h3>Sticky Module Demo</h3>
-  <p>
-    A page layout with a sidebar module that stays visible while
-    the main article content scrolls.
-  </p>
-  <a class="btn primary" href="unit-4/grid-layouts/advanced/sticky-demo.html">
-    View Assignment
-  </a>
-</article>
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">WDD 331R</p>
+          <h2 id="projects-title">Advanced CSS Projects</h2>
+        </div>
 
-<article class="card">
-  <h3>Form Control Styling</h3>
-  <p>
-    A form demo showing custom select arrows, styled range inputs,
-    caret-color, and consistent focus-visible rings.
-  </p>
-  <a class="btn primary" href="form-controls/index.html">
-    View Assignment
-  </a>
-</article>
-                <article class="card">
-          <h3>Resume Page</h3>
-          <p>
-            A semantic resume page with professional content and print-friendly styling.
-          </p>
-          <a class="btn primary" href="resume.html">
-            View Resume
-          </a>
-        </article>
+        <p>
+          The complete collection is grouped by course theme so every assignment
+          remains easy to find without overwhelming the homepage.
+        </p>
+      </div>
 
-        <article class="card">
-          <h3>Contact Form</h3>
-          <p>
-            A styled contact form using labels, form controls, and accent-color.
-          </p>
-          <a class="btn primary" href="contact.html">
-            View Contact Form
-          </a>
-        </article>
-        <article class="card">
-  <h3>Meaningful Motion</h3>
-  <p>
-    A motion design demo featuring custom easing curves, staggered
-    animations, transitions, keyframe animations, and reduced-motion
-    accessibility support.
-  </p>
-  <a class="btn primary" href="unit-6/motion/index.html">
-    View Assignment
-  </a>
-</article>
-<article class="card">
-  <h3>Styling SVG with CSS</h3>
-  <p>
-    Demonstrates how to style inline SVGs using CSS with fill, stroke,
-    currentColor, custom properties, hover transitions, and accessible
-    SVG techniques.
-  </p>
-  <a class="btn primary" href="svg-css-demo/index.html">
-    View Assignment
-  </a>
-</article>
+      <div class="project-groups">
+        <section class="project-group" aria-labelledby="foundations-title">
+          <div class="group-heading">
+            <p>Units 1–2</p>
+            <h3 id="foundations-title">Foundations &amp; CSS Architecture</h3>
+          </div>
+
+          <div class="project-list">
+            <a href="unit-1/index.html">
+              <span>
+                <strong>Custom Properties and Nesting</strong>
+                <small>Variables, nesting, and reusable styling systems</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="unit-2/layered-components/index.html">
+              <span>
+                <strong>Layered Components</strong>
+                <small>CSS layers, tokens, components, and Lightning CSS</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="project-group" aria-labelledby="visual-title">
+          <div class="group-heading">
+            <p>Unit 3</p>
+            <h3 id="visual-title">Color, Theming &amp; Visual Effects</h3>
+          </div>
+
+          <div class="project-list">
+            <a href="unit-3/index.html">
+              <span>
+                <strong>Visual Effects Showcase</strong>
+                <small>Shadows, gradients, filters, glass effects, and dark mode</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="unit-3/blend-modes.html">
+              <span>
+                <strong>Blend Modes</strong>
+                <small>Background blending, isolation, and interactive demos</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="project-group" aria-labelledby="layout-title">
+          <div class="group-heading">
+            <p>Unit 4</p>
+            <h3 id="layout-title">Layout Mastery</h3>
+          </div>
+
+          <div class="project-list">
+            <a href="unit-4/grid-layouts/editorial.html">
+              <span>
+                <strong>Editorial Layout</strong>
+                <small>Responsive grid-template-areas and article layout</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="unit-4/grid-layouts/cards.html">
+              <span>
+                <strong>Responsive Card Grid</strong>
+                <small>Auto-fit, minmax(), and display: contents</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="unit-4/grid-layouts/advanced/container-demo.html">
+              <span>
+                <strong>Container Query Demo</strong>
+                <small>Components that respond to their own available space</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="unit-4/grid-layouts/advanced/sticky-demo.html">
+              <span>
+                <strong>Sticky Module Demo</strong>
+                <small>A persistent sidebar within a long-form layout</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="project-group" aria-labelledby="type-title">
+          <div class="group-heading">
+            <p>Unit 5</p>
+            <h3 id="type-title">Typography, Print &amp; Forms</h3>
+          </div>
+
+          <div class="project-list">
+            <a href="form-controls/index.html">
+              <span>
+                <strong>Form Control Styling</strong>
+                <small>Custom controls, focus states, and consistent interaction</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="resume.html">
+              <span>
+                <strong>Resume Page</strong>
+                <small>Semantic structure and print-friendly presentation</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="contact.html">
+              <span>
+                <strong>Contact Form</strong>
+                <small>Accessible labels, form controls, and responsive styling</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="project-group" aria-labelledby="motion-title">
+          <div class="group-heading">
+            <p>Unit 6</p>
+            <h3 id="motion-title">Motion, SVG &amp; Portfolio Polish</h3>
+          </div>
+
+          <div class="project-list">
+            <a href="unit-6/motion/index.html">
+              <span>
+                <strong>Meaningful Motion</strong>
+                <small>Custom easing, staggered animation, and reduced motion</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="svg-css-demo/index.html">
+              <span>
+                <strong>Styling SVG with CSS</strong>
+                <small>Fill, stroke, currentColor, custom properties, and accessibility</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="contact-cta" aria-labelledby="contact-title">
+      <div>
+        <p class="section-label">Let’s Connect</p>
+        <h2 id="contact-title">Interested in my work?</h2>
+        <p>
+          Explore my resume or use the contact page to learn more about my
+          experience and projects.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        <a class="btn primary" href="contact.html">Contact Me</a>
+        <a class="btn secondary" href="resume.html">View Resume</a>
       </div>
     </section>
   </main>
+
+  <footer class="portfolio-footer">
+    <div>
+      <strong>Parker Woolsey</strong>
+      <p>Web Design &amp; Front-End Development</p>
+    </div>
+
+    <nav aria-label="Footer navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <p>&copy; 2026 Parker Woolsey</p>
+  </footer>
 </body>
 </html>
